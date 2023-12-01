@@ -17,8 +17,7 @@ export default function Navbar() {
 function CustomLink({ children, to, ...props }) {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-
-  return (
+  return (    
     <li className={isActive ? "active" : ""}>
       <Link to={to} {...props}>
         {children}
